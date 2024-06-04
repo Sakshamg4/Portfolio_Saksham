@@ -863,15 +863,9 @@ select.portfolio-filter-mobile {
 .pf-filter-wrapper {
   position: relative;
 }
-.pf-filter-wrapper:after {
-  content: "";
-  font-family: "FontAwesome";
-  position: absolute;
-  top: 0;
-  right: 20px;
-  color: #000;
+.pf-filter-wrapper h4{
+  margin-left: 20px;
 }
-
 /*=================================================================*/
 /*                      FACTS                              
 /*=================================================================*/
