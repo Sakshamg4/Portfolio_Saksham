@@ -210,7 +210,7 @@ header.desktop-header-2.light .vertical-menu li i {
 }
 
 header.mobile-header-2 {
-  background: #353353;
+  background-image: linear-gradient(to right top, #a4979f, #a494a3, #a191a9, #9a8fb0, #8e8fb7, #8598c5, #78a1d1, #66abdb, #55c0e9, #48d4f2, #49e8f4, #5ffbf1);
   display: none;
   padding: 10px 0;
   transition: all 0.3s ease-in-out;
