@@ -6,7 +6,9 @@
   margin: 0;
   padding: 0;
 }
-
+::selection {
+  color: rgb(92, 83, 83); 
+} 
 html {
   margin: 0 !important;
   overflow: auto !important;
