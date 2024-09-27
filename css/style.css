@@ -536,7 +536,6 @@ header.mobile-header-2 .site-logo img {
 .desktop-header-3.light .navbar-dark .navbar-nav .nav-link {
   color: #353353;
 }
-171818
 /*=================================================================*/
 /*                      SECTIONS                             
 /*=================================================================*/
@@ -1252,12 +1251,16 @@ body.dark footer.footer {
 }
 .btn-default:hover {
   color: #FFF;
+  background-color: transparent;
+  border: 1px solid #000;
   animation-name: button-push;
   animation-duration: 0.3s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
 }
-
+.btn-hover:hover{
+  color: #000;
+}
 .btn-full {
   text-align: center;
   width: 100%;
