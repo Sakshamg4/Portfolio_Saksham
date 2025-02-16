@@ -480,6 +480,36 @@ section.home.light .social-icons li a:hover {
   font-size: 14px;
 }
 
+.capsule {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.capsule-1 span {
+  position: relative;
+  display: inline-block;
+  border-radius: 50vw;
+  padding: 0.2rem 0.6rem;
+  background-color: #0e0d1a;
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.capsule-1 span:hover {
+  background-color: #FF4C60;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
 /*=================================================================*/
 /*                      SERVICE                              
 /*=================================================================*/
@@ -1843,29 +1873,3 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 /*# sourceMappingURL=style.css.map */
 
-.capsule {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-}
-
-.capsule-1 span {
-  position: relative;
-  display: inline-block;
-  border-radius: 50vw;
-  padding: 0.2rem 0.6rem;
-  background-color: #0e0d1a;
-  color: #fff;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.capsule-1 span:hover {
-  background-color: #FF4C60;
-  color: #fff;
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
