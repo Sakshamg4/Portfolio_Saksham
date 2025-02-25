@@ -11,21 +11,21 @@ requestAnimationFrame(raf);
 
 
 
-document.addEventListener('mousemove', (e) => {
-  gsap.to('.mouse-move', {
-    x: e.clientX,
-    y: e.clientY,
-    duration: 0.5,
-    ease:'[0.33, 1, 0.68, 1]'
-
-  });
-});
 
 
 
 $(window).on('load', function () {
   "use strict";
-
+  
+  document.addEventListener('mousemove', (e) => {
+    gsap.to('.mouse-move', {
+      x: e.clientX,
+      y: e.clientY,
+      duration: 0.5,
+      ease:'[0.33, 1, 0.68, 1]'
+  
+    });
+  });
   /*=========================================================================
    Wow Initialize
    =========================================================================*/
