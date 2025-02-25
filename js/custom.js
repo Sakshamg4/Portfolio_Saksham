@@ -10,9 +10,9 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
-var mouseCursor = document.querySelector('.mouse-move');
+
 document.addEventListener('mousemove', (e) => {
-  gsap.to(mouseCursor, {
+  gsap.to('.mouse-move', {
     x: e.clientX,
     y: e.clientY,
     duration: 0.5,
@@ -25,14 +25,6 @@ document.addEventListener('mousemove', (e) => {
 
 $(window).on('load', function () {
   "use strict";
-
-
-
-
-
-
-
-
 
   /*=========================================================================
    Wow Initialize
