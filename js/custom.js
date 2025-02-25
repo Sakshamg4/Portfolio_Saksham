@@ -1,7 +1,5 @@
-// Initialize Lenis
 const lenis = new Lenis();
 
-// Use requestAnimationFrame to continuously update the scroll
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
@@ -9,116 +7,17 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-
-
-
-
-
-$(window).on('load', function () {
-  "use strict";
-  
-  document.addEventListener('mousemove', (e) => {
+document.addEventListener('mousemove', (e) => {
+  if (window.innerWidth > 768) { // Only run on devices wider than 768px
     gsap.to('.mouse-move', {
       x: e.clientX,
       y: e.clientY,
       duration: 0.5,
-      ease:'[0.33, 1, 0.68, 1]'
-  
+      ease: 'power4.out'
     });
-  });
-  /*=========================================================================
-   Wow Initialize
-   =========================================================================*/
-  // Here will be the WoW Js implementation.
-  setTimeout(function () { new WOW().init(); }, 0);
-
-  var dynamicDelay = [
-    200,
-    400,
-    600,
-    800,
-    1000,
-    1200,
-    1400,
-    1600,
-    1800,
-    2000
-  ];
-  var fallbackValue = "200ms";
-
-  $(".blog-item.wow").each(function (index) {
-    $(this).attr("data-wow-delay", typeof dynamicDelay[index] === 'undefined' ? fallbackValue : dynamicDelay[index] + "ms");
-  });
-
-  /*=========================================================================
-   Isotope
-   =========================================================================*/
-  $('.portfolio-filter').on('click', 'li', function () {
-    var filterValue = $(this).attr('data-filter');
-    $container.isotope({ filter: filterValue });
-  });
-
-  // change is-checked class on buttons
-  $('.portfolio-filter').each(function (i, buttonGroup) {
-    var $buttonGroup = $(buttonGroup);
-    $buttonGroup.on('click', 'li', function () {
-      $buttonGroup.find('.current').removeClass('current');
-      $(this).addClass('current');
-    });
-  });
-
-  var $container = $('.portfolio-wrapper');
-  $container.imagesLoaded(function () {
-    $('.portfolio-wrapper').isotope({
-      // options
-      itemSelector: '[class*="col-"]',
-      percentPosition: true,
-      masonry: {
-        // use element for option
-        columnWidth: '[class*="col-"]'
-      }
-    });
-  });
-
-  /* ======= Mobile Filter ======= */
-
-  // bind filter on select change
-  $('.portfolio-filter-mobile').on('change', function () {
-    // get filter value from option value
-    var filterValue = this.value;
-    // use filterFn if matches value
-    filterValue = filterFns[filterValue] || filterValue;
-    $container.isotope({ filter: filterValue });
-  });
-
-  var filterFns = {
-    // show if number is greater than 50
-    numberGreaterThan50: function () {
-      var number = $(this).find('.number').text();
-      return parseInt(number, 10) > 50;
-    },
-    // show if name ends with -ium
-    ium: function () {
-      var name = $(this).find('.name').text();
-      return name.match(/ium$/);
-    }
-  };
+  }
 });
 
-$(document).on('ready', function () {
-  "use strict";
-
-  /*=========================================================================
-              Slick Slider
-  =========================================================================*/
-  $('.testimonials-wrapper').slick({
-    dots: true,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 3000
-  });
-
-});
 
 $(function () {
   "use strict";
@@ -176,7 +75,7 @@ $(function () {
   =========================================================================*/
   $(".text-rotating").Morphext({
     // The [in] animation type. Refer to Animate.css for a list of available animations.
-    animation: "bounceIn",
+    animation: "slideInDown",
     // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
     separator: ",",
     // The delay between the changing of each phrase in milliseconds.
